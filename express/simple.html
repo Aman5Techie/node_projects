@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Website</title>
+</head>
+<body>
+
+	<h1>Welcome to my interactive website!</h1>
+
+	<form>
+		<label for="name">Enter your name:</label>
+		<input type="text" id="name" name="name">
+		<button type="submit">Submit</button>
+	</form>
+
+	<script>
+		// Add event listener for form submission
+		document.querySelector('form').addEventListener('submit', function(e) {
+			e.preventDefault(); // Prevent form from actually submitting
+
+			// Get user's name from form input
+			let name = document.getElementById('name').value;
+
+			// Display greeting message
+			alert(`Hello, ${name}! Welcome to my website.`);
+		});
+	</script>
+
+</body>
+</html>
